@@ -10,6 +10,6 @@ const api = express.Router();
 
 api.route("/all").get(getAllTechnologies).post(addTechnology);
 api.route("/:road/road").get(getTechnologiesByRoad);
-api.route("/:technology/technology").get(getTechnologyByName);
+api.route("/:name/technology").get(getTechnologyByName);
 
 export default api;
