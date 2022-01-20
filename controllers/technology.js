@@ -1,4 +1,4 @@
-import Technology from "../models/Technology";
+import Technology from "../models/Technology.js";
 
 const getAllTechnologies = (req, res) => {
   Technology.find({})
@@ -30,7 +30,7 @@ const addTechnology = async (req, res) => {
   }
 };
 
-const getTechnologiesByRoad = (req, res) => {
+const getTechnologiesByRoad = async (req, res) => {
   try {
     const technologiesByRoad = await Technology.find(req.params);
     res.json(technologiesByRoad);
@@ -41,7 +41,7 @@ const getTechnologiesByRoad = (req, res) => {
   }
 };
 
-const getTechnologyByName = (req, res) => {
+const getTechnologyByName = async (req, res) => {
   try {
     const technologyByName = await Technology.find(req.params);
     res.json(technologyByName);

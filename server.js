@@ -3,7 +3,7 @@ import express from "express";
 import colors from "colors";
 import cors from "cors";
 import mongoose from "mongoose";
-import technology from "./api/Technology";
+import technology from "./api/technology.js";
 
 dotenv.config();
 const PORT = process.env.PORT || 3001;
@@ -26,4 +26,4 @@ mongoose
 server.get("/", (req, res) =>
   res.send("Welcome to the Hackaton Team 3 Server!")
 );
-server.use / ("/api", technology);
+server.use("/api", technology);
